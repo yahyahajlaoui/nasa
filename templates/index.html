@@ -1,0 +1,157 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+    <div class="container">
+        
+        <br><br>
+        <div class="input-group">
+            <form action="#" method="POST" enctype="multipart/form-data" style="margin-top:20px;">
+                <label for="exampleInputEmail1" class="form-label">QUALITY </label>
+                <input type="text" name="name" class="form-control"/>
+                <div id="emailHelp" class="form-text">--------------------------------------------------------------------------------A flag from SHARP representing quality of the data as related to noise 
+                    -------------------------------------------------------------------------</div>
+                <label for="exampleInputEmail1" class="form-label">TOTBSQ  </label>
+                <input type="text" name="name_a" class="form-control"/>
+                <div id="emailHelp" class="form-text">----------------------------------------------------------------------------------------------------Total magnitude of the Lorentz force ------------------------------------------------------------------------------------------</div>
+                <label for="exampleInputEmail1" class="form-label">TOTPOT </label>
+                <input type="text" name="name_b" class="form-control"/>
+                <div id="emailHelp" class="form-text">-----------------------------------------------------------------------------------------------Total photospheric magnetic free energy density-----------------------------------------------------------------------------------</div>
+                <label for="exampleInputEmail1" class="form-label">TOTUSJZ </label>
+                <input type="text" name="name_c" class="form-control"/>
+                <div id="emailHelp" class="form-text">--------------------------------------------------------------------------------------------------------Total unsigned vertical current
+                    ---------------------------------------------------------------------------------------------</div>
+                <label for="exampleInputEmail1" class="form-label">MEANPOT </label>
+                <input type="text" name="name_d" class="form-control"/>
+                <div id="emailHelp" class="form-text">------------------------------------------------------------------------------------------------------Mean photospheric magnetic free energy
+                    --------------------------------------------------------------------------------</div>
+                <label for="exampleInputEmail1" class="form-label">MEANGBT </label>
+                <input type="text" name="name_e" class="form-control"/>
+                <div id="emailHelp" class="form-text">---------------------------------------------------------------------------------------------------Average gradient of the total magnetic field-------------------------------------------------------------------------</div>
+                <label for="exampleInputEmail1" class="form-label">MEANJZD </label>
+                <input type="text" name="name_f" class="form-control"/>
+                <div id="emailHelp" class="form-text">---------------------------------------------------------------------------------------------------------Average vertical current density 
+------------------------------------------------------------------------------------------</div>
+                <input type="submit" value="Upload Values" class="btn btn-outline-secondary">
+            
+            </form>
+        </div>    
+    </div>
+   
+    {% if upload %}
+    {% if not xx %}
+        <style>
+        #customers {
+          font-family: Arial, Helvetica, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        #customers td, #customers th {
+          border: 1px solid #ddd;
+          padding: 8px;
+        }
+        
+        #customers tr:nth-child(even){background-color: #f2f2f2;}
+        
+        #customers tr:hover {background-color: #ddd;}
+        table, td, th {
+  border: 1px solid black;
+}
+
+        table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+        td {
+  text-align: center;
+}
+        #customers th {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: left;
+          background-color: #04AA6D;
+          color: white;
+        }
+        </style>
+        <div class="container">
+            <table id="customers">
+                <tr width="50" 
+                height="50">
+                    
+                    <th>Result</th>
+                </tr>
+                <tr width="50" 
+                height="50">
+                    <td >
+                        <h1 class="display-8"> {{ text }}</h1>
+                    </td>
+
+                </tr>
+            </table>
+
+        </div>
+    
+    {% endif %}
+
+    {% if xx %}
+    
+        <style>
+        #customers {
+          font-family: Arial, Helvetica, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        #customers td, #customers th {
+          border: 1px solid #ddd;
+          padding: 8px;
+        }
+        
+        #customers tr:nth-child(even){background-color: #f2f2f2;}
+        
+        #customers tr:hover {background-color: #ddd;}
+        table, td, th {
+  border: 1px solid black;
+}
+
+        table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+        td {
+  text-align: center;
+}
+        #customers th {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: left;
+          background-color: #bf1b06;
+          color: white;
+        }
+        </style>
+        <div class="container">
+            <table id="customers">
+                <tr width="50" 
+                height="50">
+                    
+                    <th>Result</th>
+                </tr>
+                <tr width="50" 
+                height="50">
+                    <td >
+                        <h1 class="display-8"> {{ text }}</h1>
+                    </td>
+
+                </tr>
+            </table>
+
+        </div>
+    
+    
+    {% endif %}
+    {% endif %}
+
+
+{% endblock  %}
